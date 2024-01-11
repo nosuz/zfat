@@ -1,5 +1,5 @@
 const std = @import("std");
-const config = @import("config");
+// const config = @import("config");
 const c = @cImport({
     @cInclude("ff.h");
     @cInclude("diskio.h");
@@ -555,12 +555,12 @@ const RtcExport = struct {
     }
 };
 
-comptime {
-    if (config.has_rtc) {
-        // @compileLog("...", config.has_rtc);
-        _ = RtcExport;
-    }
-}
+// comptime {
+//     if (config.has_rtc) {
+//         // @compileLog("...", config.has_rtc);
+//         _ = RtcExport;
+//     }
+// }
 
 export fn disk_status(
     pdrv: c.BYTE, // Physical drive nmuber to identify the drive */
